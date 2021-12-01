@@ -1546,7 +1546,8 @@ setup(void)
 	#if PANGO_PATCH
 	bh = drw->font->h + 2;
 	#else
-	bh = drw->fonts->h + 2;
+	//bh = drw->fonts->h + 2;
+	bh = drw->fonts->h;
 	#endif // PANGO_PATCH
 	#if LINE_HEIGHT_PATCH
 	bh = MAX(bh,lineheight);	/* make a menu line AT LEAST 'lineheight' tall */
@@ -2118,3 +2119,4 @@ main(int argc, char *argv[])
 
 	return 1; /* unreachable */
 }
+
